@@ -5,26 +5,6 @@ import seaborn as sns
 from faker import Faker
 import random
 
-# Sahte veri oluştur
-# fake = Faker()
-# np.random.seed(42)
-
-# # Geliştiriciler
-# developers = ['Ali', 'Ayşe', 'Mehmet', 'Elif', 'Ahmet']
-
-# # 200 commitlik veri üret
-# data = []
-# for _ in range(200):
-#     commit_id = fake.sha1()
-#     dev = random.choice(developers)
-#     date = fake.date_between(start_date='-6M', end_date='today')
-#     file_changed = fake.file_name(extension='py')
-#     lines_added = np.random.poisson(lam=10)
-#     lines_deleted = np.random.poisson(lam=5)
-#     commit_msg = fake.sentence(nb_words=6)
-#     data.append([commit_id, dev, date, file_changed, lines_added, lines_deleted, commit_msg])
-
-# df = pd.DataFrame(data, columns=['Commit ID', 'Developer', 'Date', 'File Changed', 'Lines Added', 'Lines Deleted', 'Commit Message'])
 df = pd.read_csv("git_commit.csv")
 
 # ---- Analizler Başlıyor ----
